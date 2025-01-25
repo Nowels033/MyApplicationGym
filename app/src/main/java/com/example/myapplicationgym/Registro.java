@@ -1,7 +1,10 @@
 package com.example.myapplicationgym;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
@@ -19,15 +22,17 @@ public class Registro extends MainActivity {
 
 
 
-//        btnEntrar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent intent = new Intent(MainActivity.this,IniciarSesion.class);
-//                startActivity(intent);
-//
-//            }
-//        });
+        Button volver = findViewById(R.id.volver2);
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Registro.this,MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.registro), (v, insets) -> {
