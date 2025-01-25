@@ -52,8 +52,8 @@
 
     <Button
         android:id="@+id/registro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="129dp"
+        android:layout_height="49dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="252dp"
         android:text="Registrarse"
