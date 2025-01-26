@@ -1,13 +1,15 @@
 package com.example.myapplicationgym;
 
 public class Persona {
+    private String usuario;
     private String nombre;
     private String apellido;
     private String correo;
     private double peso;
     private double estatura;
 
-    public Persona(String nombre, String apellido, String correo, double peso, double estatura) {
+    public Persona(String usuario, String nombre, String apellido, String correo, double peso, double estatura) {
+        this.usuario = usuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -15,6 +17,9 @@ public class Persona {
         this.estatura = estatura;
     }
 
+    public String getUsuario() {
+        return usuario;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -37,5 +42,16 @@ public class Persona {
 
     public double calcularIMC() {
         return peso / (estatura * estatura);
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", correo='" + correo + '\'' +
+                ", peso=" + peso +
+                ", estatura=" + estatura +
+                '}';
     }
 }
