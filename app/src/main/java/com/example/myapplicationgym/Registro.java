@@ -29,6 +29,8 @@ public class Registro extends MainActivity {
 
 
         Button volver = findViewById(R.id.volver2);
+        Persona prueba = new Persona("prueba","prueba","prueba","pruebaApellido","prueba@prueba.com",0,0.0);
+        personas.add(prueba);
 
 
         volver.setOnClickListener(new View.OnClickListener() {
@@ -96,9 +98,13 @@ public class Registro extends MainActivity {
             Toast.makeText(this, "Por favor ingrese un peso", Toast.LENGTH_SHORT).show();
             return;
         }
-        Persona newPersona = new Persona(usuario.getText().toString(),nombre.getText().toString(),null,correo.getText().toString(),Double.parseDouble(peso.getText().toString()),Double.parseDouble(altura.getText().toString()));
+        Persona newPersona = new Persona(usuario.getText().toString(),contrasena.getText().toString(),nombre.getText().toString(),null,correo.getText().toString(),Double.parseDouble(peso.getText().toString()),Double.parseDouble(altura.getText().toString()));
         personas.add(newPersona);
 
+    }
+
+    public static List<Persona> getPersonas() {
+        return personas;
     }
 }
 
