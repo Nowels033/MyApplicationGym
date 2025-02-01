@@ -43,7 +43,7 @@ public class IniciarSesion extends AppCompatActivity {
 
                 for (int i = 0; i < Registro.getPersonas().size(); i++) {
 
-                    if (usuario.getText().toString().equals(Registro.getPersonas().get(i).getUsuario()) ){
+                    if (usuario.getText().toString().equalsIgnoreCase(Registro.getPersonas().get(i).getUsuario()) ){
 
                         if (contrasena.getText().toString().equals(Registro.getPersonas().get(i).getContrasena())){
 
